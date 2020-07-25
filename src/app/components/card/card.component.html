@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-body text-center">
+        <img width="150" height="150"
+        class="rounded-circle img-thumbnail border"
+        [src]="post.picture?.large">
+    </div>
+    <div class="card-title text-primary">
+        <h1>
+            <span class="px-2">{{post.name?.title}}</span>
+            <span class="px-2">{{post.name?.first}}</span>
+            <span class="px-2">{{post.name?.last}}</span>
+
+        </h1>
+       
+    </div>
+    <div class="card-text font-weight-bold">
+        <fa-icon [icon]="faEnvelope"></fa-icon>
+        {{post.email}}
+    </div>
+    <div class="card-text mt-2">
+        <fa-icon [icon]="faMapMarkedAlt"></fa-icon>
+        {{post.location?.city}} {{post.location?.state}}
+    </div>
+    <div class="card-text mt-2">
+        <fa-icon [icon]="faPhone"></fa-icon>
+        {{post.phone}}
+    </div>
+   
+    <div class="card=text mt-2">
+        <fa-icon [icon]="faDatabase"></fa-icon>
+        Registered On {{post.registered?.date| date}}
+        
+    </div>
+    <button class="btn btn-lg btn-success mt-2"
+    (click)="refreshPage()">
+    Get Random Users
+    </button>
+    
+  
+    
+</div>
